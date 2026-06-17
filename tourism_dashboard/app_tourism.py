@@ -12,6 +12,9 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+from pathlib import Path
+
+BASE_DIR = Path(__file__).parent
 
 # ── PAGE CONFIG ──────────────────────────────────────────────────────────────
 
@@ -71,7 +74,7 @@ st.markdown(f"""
 @st.cache_data
 def load_main():
     """Load the main geo-level tourism dataset."""
-    df = pd.read_parquet("data/07_streamlit_dataset.parquet")
+    df = pd.read_parquet(BASE_DIR / "data" / "07_streamlit_dataset.parquet")
     df["period"] = pd.to_datetime(df["period"])
     df["month_name"] = df["period"].dt.strftime("%b")
     return df
@@ -81,7 +84,7 @@ def load_main():
 def load_destination_summary():
     """Load destination intelligence profiles from NB-08."""
     try:
-        df = pd.read_parquet("data/08_destination_summary.parquet")
+        df = pd.read_parquet(BASE_DIR / "data" / "08_destination_summary.parquet")
         return df
     except FileNotFoundError:
         return None
@@ -91,7 +94,7 @@ def load_destination_summary():
 def load_destination_summary_strategic():
     """Load strategic-subset destination profiles from NB-08."""
     try:
-        df = pd.read_parquet("data/08_destination_summary_strategic_subset.parquet")
+        df = pd.read_parquet(BASE_DIR / "data" / "08_destination_summary_strategic_subset.parquet")
         return df
     except FileNotFoundError:
         return None
