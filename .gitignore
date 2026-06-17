@@ -10,5 +10,5 @@ models/
 
 .env
 
-Report/Report.docx
-Presentation.pptx
+*.docx
+*.pptx
