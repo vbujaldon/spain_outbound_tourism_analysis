@@ -1,0 +1,16 @@
+beautifulsoup4
+jupyter
+numpy
+pandas
+plotly
+pyarrow
+python-dotenv
+pytrends
+requests
+seaborn
+selenium
+streamlit
+Unidecode
+webdriver-manager
+openpyxl
+matplotlib

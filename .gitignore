@@ -1,0 +1,14 @@
+__pycache__/
+.ipynb_checkpoints/
+
+data/interim/
+data/processed/
+data/modeling
+
+
+models/
+
+.env
+
+Report/Report.docx
+Presentation.pptx
