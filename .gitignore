@@ -12,3 +12,5 @@ models/
 
 *.docx
 *.pptx
+~*.tmp
+~$*
