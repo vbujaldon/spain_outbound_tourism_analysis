@@ -13,4 +13,5 @@ streamlit
 Unidecode
 webdriver-manager
 openpyxl
-matplotlib
+matplotlibscipy
+pycountry
